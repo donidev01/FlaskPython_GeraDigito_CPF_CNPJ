@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block conteudo %}
+<p>
+<p>
+<h2><label>Gerador de Digito para CPF e CNPJ</label></h2>
+<p>
+<p>
+<p><label>
+        Versão WEB by FDO 07/2022.
+        <br>
+        Gerador de digitos \o/
+        <form method="POST">
+            CPF
+            <input type="radio" name="tipo_pess" value="cpf" required>
+            CNPJ
+            <input type="radio" name="tipo_pess" value="cnpj" required><br>
+            <input class="form-control" type="text" name="docs" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+
+<style>
+    p {
+        margin: 0;
+    }
+</style>
+<hr>
+<p>Retorno</p>
+{% for e in docs %}
+<p>{{e}}</p>
+
+{% endfor %}
+{% endblock %}

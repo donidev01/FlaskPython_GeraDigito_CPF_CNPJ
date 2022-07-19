@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+
+{% block conteudo %}
+<p>
+<p>
+<h2><label>Gerador de Documentos Pessoa Fisica(cpf) e Juridica(cnpj)</label></h2>
+<p>
+<p>
+<p><label>
+
+        Versão WEB by FDO 07/2022.
+        <br>
+        Gerador de documento(s) \o/
+        <form method="POST">
+            CPF
+            <input type="radio" name="tipo_pess" value="cpf" required>
+            CNPJ
+            <input type="radio" name="tipo_pess" value="cnpj" required><br>
+            Quantidade
+            <input class="form-control" type="text" name="qtddocs" required><br>
+            <button class="btn btn-primary" type="submit">Gerar</button></p>
+</form>
+
+<style>
+    p {
+        margin: 0;
+    }
+</style>
+<hr>
+<h1>Retorno</h1>
+{% for e in docs %}
+<p>{{e}}</p>
+
+{% endfor %}
+{% endblock %}
